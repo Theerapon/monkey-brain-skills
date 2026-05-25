@@ -13,7 +13,7 @@ Six skills for the monkey-brain dump → kick → play workflow. Works with **Cl
 | `play-mk-dump` | Execute a spec issue by issue, tracking progress across sessions |
 | `remove-mk-dump` | Delete a non-kicked dump session |
 
-## Install
+## Install / Update
 
 ```bash
 npx skills@latest add Theerapon/monkey-brain-skills
@@ -39,12 +39,6 @@ Run `/init-mk-dump` once to create `docs/monkey-brain/` with templates and empty
 /clean-mk-dump   → structured summary
 /kick-mk-dump    → challenge + spec
 /play-mk-dump    → execute issue by issue
-```
-
-## Update
-
-```bash
-npx skills@latest add Theerapon/monkey-brain-skills
 ```
 
 ## Companion skills
