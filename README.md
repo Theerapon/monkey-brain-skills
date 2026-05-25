@@ -38,10 +38,10 @@ Works with Claude Code, GitHub Copilot, Cursor, Windsurf, and any agent that sup
 
 ```bash
 # Install all skills at once (recommended)
-npx skills add Theerapon/monkey-brain-skills -y
+npx skills@latest add Theerapon/monkey-brain-skills -y
 
 # Or global install (available across all projects)
-npx skills add -g Theerapon/monkey-brain-skills -y
+npx skills@latest add -g Theerapon/monkey-brain-skills -y
 ```
 
 The `-y` flag skips the per-skill picker and installs all 6 at once. Omit `-y` to select individual skills interactively.
@@ -74,7 +74,7 @@ Run `/init-mk-dump` once to create `docs/monkey-brain/` with templates and empty
 
 **Option A:** `/plugin update monkey-brain@monkey-brain-skills`
 
-**Option B:** `npx skills update Theerapon/monkey-brain-skills -y`
+**Option B:** `npx skills@latest update Theerapon/monkey-brain-skills -y`
 
 ## Companion skills
 
@@ -87,7 +87,7 @@ For building new skills using proper structure and progressive disclosure.
 > Source: [mattpocock/skills](https://github.com/mattpocock/skills) · MIT
 
 ```bash
-npx skills add mattpocock/skills
+npx skills@latest add mattpocock/skills
 ```
 
 ### andrej-karpathy-skills — forrestchang
