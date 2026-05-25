@@ -37,20 +37,14 @@ Then run setup once:
 Works with Claude Code, GitHub Copilot, Cursor, Windsurf, and any agent that supports `.claude/skills/`. Skills appear without namespace prefix (e.g. `/add-mk-dump`).
 
 ```bash
-npx skills add Theerapon/monkey-brain-skills
+# Install all skills at once (recommended)
+npx skills add Theerapon/monkey-brain-skills -y
+
+# Or global install (available across all projects)
+npx skills add -g Theerapon/monkey-brain-skills -y
 ```
 
-The installer shows a grouped picker:
-
-```
-monkey-brain
-  ✓ add-mk-dump
-  ✓ clean-mk-dump
-  ✓ init-mk-dump
-  ✓ kick-mk-dump
-  ✓ play-mk-dump
-  ✓ remove-mk-dump
-```
+The `-y` flag skips the per-skill picker and installs all 6 at once. Omit `-y` to select individual skills interactively.
 
 Then run setup once (see [First run](#first-run) below for your tool).
 
@@ -80,7 +74,7 @@ Run `/init-mk-dump` once to create `docs/monkey-brain/` with templates and empty
 
 **Option A:** `/plugin update monkey-brain@monkey-brain-skills`
 
-**Option B:** `npx skills update Theerapon/monkey-brain-skills`
+**Option B:** `npx skills update Theerapon/monkey-brain-skills -y`
 
 ## Companion skills
 
