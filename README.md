@@ -15,9 +15,11 @@ Six skills for the monkey-brain dump → kick → play workflow. Works with **Cl
 
 ## Install
 
+> **Pick one option only.** Installing both creates duplicate skills that can drift out of sync.
+
 ### Option A — Claude Code plugin
 
-Installs as a proper Claude Code plugin. Skills are namespaced as `monkey-brain:skill-name`.
+Skills are namespaced as `monkey-brain:skill-name`. Claude Code only.
 
 ```
 /plugin marketplace add Theerapon/monkey-brain-skills
@@ -30,28 +32,40 @@ Then run setup once:
 /monkey-brain:init-mk-dump
 ```
 
-### Option B — npx (Claude Code + GitHub Copilot + Cursor + Windsurf)
+### Option B — npx
 
-Installs skill folders directly into your workspace. Skills appear without namespace prefix (e.g. `/add-mk-dump`). Works in any agent that supports `.claude/skills/`.
+Works with Claude Code, GitHub Copilot, Cursor, Windsurf, and any agent that supports `.claude/skills/`. Skills appear without namespace prefix (e.g. `/add-mk-dump`).
 
 ```bash
 npx skills add Theerapon/monkey-brain-skills
+```
+
+The installer shows a grouped picker:
+
+```
+monkey-brain
+  ✓ add-mk-dump
+  ✓ clean-mk-dump
+  ✓ init-mk-dump
+  ✓ kick-mk-dump
+  ✓ play-mk-dump
+  ✓ remove-mk-dump
 ```
 
 Then run setup once (see [First run](#first-run) below for your tool).
 
 ## First run
 
-After installing, run `/init-mk-dump` once to create `docs/monkey-brain/` with templates and empty index files.
+Run `/init-mk-dump` once to create `docs/monkey-brain/` with templates and empty index files. The skill auto-detects your tool and writes to the correct instructions file.
 
-| Tool | Where to run |
-|------|-------------|
-| **Claude Code** | Type `/init-mk-dump` in the prompt (Option A: `/monkey-brain:init-mk-dump`) |
-| **GitHub Copilot** | Open Copilot Chat in VS Code → type `/init-mk-dump` |
-| **Cursor** | Open Cursor Chat → type `/init-mk-dump` |
-| **Windsurf** | Open Cascade panel → type `/init-mk-dump` |
-| **Gemini CLI** | Type `/init-mk-dump` in the chat prompt |
-| **Other** | Any agent with `.claude/skills/` support → type `/init-mk-dump` |
+| Tool | Where to run | Instructions file written |
+|------|-------------|--------------------------|
+| **Claude Code** | Type `/init-mk-dump` in the prompt (Option A: `/monkey-brain:init-mk-dump`) | `CLAUDE.md` |
+| **GitHub Copilot** | Copilot Chat in VS Code → `/init-mk-dump` | `.github/copilot-instructions.md` |
+| **Cursor** | Cursor Chat → `/init-mk-dump` | `.cursor/rules/monkey-brain.mdc` |
+| **Windsurf** | Cascade panel → `/init-mk-dump` | `AGENTS.md` |
+| **Gemini CLI** | Chat prompt → `/init-mk-dump` | `GEMINI.md` |
+| **Other** | Chat prompt → `/init-mk-dump` | `AGENTS.md` |
 
 ## Workflow
 
@@ -61,6 +75,12 @@ After installing, run `/init-mk-dump` once to create `docs/monkey-brain/` with t
 /kick-mk-dump    → challenge + spec
 /play-mk-dump    → execute issue by issue
 ```
+
+## Updating
+
+**Option A:** `/plugin update monkey-brain@monkey-brain-skills`
+
+**Option B:** `npx skills update Theerapon/monkey-brain-skills`
 
 ## Companion skills
 
@@ -87,20 +107,15 @@ Behavioral guidelines to reduce common LLM coding mistakes, derived from Andrej 
 /plugin install andrej-karpathy-skills@karpathy-skills
 ```
 
-## Updating
-
-**Option A:** `/plugin update monkey-brain@monkey-brain-skills`
-
-**Option B:** `npx skills update Theerapon/monkey-brain-skills`
-
 ## Structure
 
 ```
 monkey-brain-skills/
 ├── .claude-plugin/
-│   └── plugin.json       ← Claude Code plugin manifest
+│   ├── plugin.json         ← Claude Code plugin manifest
+│   └── marketplace.json    ← Claude Code marketplace catalog
 ├── skills/
-│   └── monkey-brain/
+│   └── monkey-brain/       ← group label shown in npx picker
 │       ├── add-mk-dump/
 │       ├── clean-mk-dump/
 │       ├── init-mk-dump/
