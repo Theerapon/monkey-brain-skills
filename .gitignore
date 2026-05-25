@@ -1,2 +1,24 @@
+# Installed agent skills (npx skills add output)
 .agents/
-bash.exe.stackdump
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Windows crash dumps
+*.stackdump
+
+# Env
+.env
+.env.local
