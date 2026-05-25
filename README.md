@@ -93,21 +93,6 @@ Behavioral guidelines to reduce common LLM coding mistakes, derived from Andrej 
 
 **Option B:** `npx skills update Theerapon/monkey-brain-skills`
 
-## Publishing updates (maintainer)
-
-Skills are authored in the workspace at `workspace/.claude/skills/`. After editing, sync and publish:
-
-```powershell
-$src = "C:\Users\theer\projects\workspace\.claude\skills"
-$dst = "C:\Users\theer\projects\monkey-brain-skills\skills"
-$skills = @('add-mk-dump','clean-mk-dump','init-mk-dump','kick-mk-dump','play-mk-dump','remove-mk-dump')
-foreach ($s in $skills) { Copy-Item "$src\$s\*" "$dst\$s\" -Recurse -Force }
-cd C:\Users\theer\projects\monkey-brain-skills
-git add -A
-git commit -m "Update skills"
-git push
-```
-
 ## Structure
 
 ```
