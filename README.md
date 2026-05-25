@@ -15,7 +15,7 @@ Six skills for the monkey-brain dump → kick → play workflow. Works with **Cl
 
 ## Install
 
-### Option A — Claude Code plugin (recommended)
+### Option A — Claude Code plugin
 
 Installs as a proper Claude Code plugin. Skills are namespaced as `monkey-brain:skill-name`.
 
@@ -29,36 +29,19 @@ Then run setup once:
 /monkey-brain:init-mk-dump
 ```
 
-### Option B — Manual copy (Claude Code + GitHub Copilot)
+### Option B — npx (Claude Code + GitHub Copilot)
 
-Use this when you want the skills to appear without a namespace prefix (e.g. `/add-mk-dump` instead of `/monkey-brain:add-mk-dump`), or to install in Copilot which doesn't use the plugin system.
+Installs skill folders directly into your workspace. Skills appear without namespace prefix (e.g. `/add-mk-dump`). Also works in GitHub Copilot.
 
 ```bash
-# Clone repo
-git clone https://github.com/Theerapon/monkey-brain-skills.git /tmp/monkey-brain-skills
-
-# Copy skill folders into your workspace
-cp -r /tmp/monkey-brain-skills/skills/add-mk-dump      {workspace-root}/.claude/skills/
-cp -r /tmp/monkey-brain-skills/skills/clean-mk-dump     {workspace-root}/.claude/skills/
-cp -r /tmp/monkey-brain-skills/skills/init-mk-dump      {workspace-root}/.claude/skills/
-cp -r /tmp/monkey-brain-skills/skills/kick-mk-dump      {workspace-root}/.claude/skills/
-cp -r /tmp/monkey-brain-skills/skills/play-mk-dump      {workspace-root}/.claude/skills/
-cp -r /tmp/monkey-brain-skills/skills/remove-mk-dump    {workspace-root}/.claude/skills/
+npx skills add Theerapon/monkey-brain-skills
 ```
 
-Replace `{workspace-root}` with the path you open in Claude Code or VS Code (e.g. `~/projects`).
-
-Then run setup once inside Claude Code or Copilot Chat:
+Then run setup once:
 
 ```
 /init-mk-dump
 ```
-
-## First run
-
-After installing, open your workspace in Claude Code or VS Code and run `/init-mk-dump` (or `/monkey-brain:init-mk-dump` for plugin install).
-
-This creates `docs/monkey-brain/` with the required templates and empty index files.
 
 ## Workflow
 
@@ -73,7 +56,7 @@ This creates `docs/monkey-brain/` with the required templates and empty index fi
 
 **Option A:** `/plugin update monkey-brain`
 
-**Option B:** Pull and re-copy the `skills/` folders.
+**Option B:** `npx skills update Theerapon/monkey-brain-skills`
 
 ## Structure
 
