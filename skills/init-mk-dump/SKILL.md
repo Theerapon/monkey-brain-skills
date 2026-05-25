@@ -1,7 +1,6 @@
 ---
 name: init-mk-dump
 description: One-time setup for the monkey-brain dump system. Creates directory structure, MONKEY_BRAIN_TEMPLATE.md, and empty dump-index.md. Use when user runs /init-mk-dump or needs to set up the system for the first time. Does not create sessions.
-user-invocable: true
 ---
 
 # init-mk-dump
@@ -10,7 +9,17 @@ One-time setup. Safe to re-run — always refreshes the template, skips dump-ind
 
 ## Flow
 
-1. **Install karpathy-guidelines if missing** — run `claude plugins list` and check if `andrej-karpathy-skills` appears.
+1. **Detect the active AI tool** — check which files/folders exist to identify the tool:
+   - `.cursor/` exists → **Cursor** → instructions file: `.cursor/rules/monkey-brain.mdc`
+   - `.windsurf/` exists → **Windsurf** → instructions file: `AGENTS.md`
+   - `.github/` exists → **GitHub Copilot** → instructions file: `.github/copilot-instructions.md`
+   - `GEMINI.md` exists → **Gemini CLI** → instructions file: `GEMINI.md`
+   - `CLAUDE.md` exists → **Claude Code** → instructions file: `CLAUDE.md`
+   - None of the above → default to **AGENTS.md** (universal standard)
+   - If multiple signals conflict: ask the user which tool they are using.
+
+2. **Install karpathy-guidelines (Claude Code only)** — skip this step for all other tools.
+   - Run `claude plugins list` and check if `andrej-karpathy-skills` appears.
    - If missing: run in order:
      ```
      claude plugins marketplace add karpathy-skills github:forrestchang/andrej-karpathy-skills
@@ -18,12 +27,13 @@ One-time setup. Safe to re-run — always refreshes the template, skips dump-ind
      ```
      Then tell user: "karpathy-skills installed — **restart Claude Code** before continuing."
    - If already installed: continue silently.
-2. Create `docs/monkey-brain/`, `docs/monkey-brain/dump-sessions/`, and `docs/monkey-brain/specs/` if they don't exist
-3. Always overwrite `docs/monkey-brain/MONKEY_BRAIN_TEMPLATE.md` — use content below (template is skill-owned, not user data)
-4. Create `docs/monkey-brain/dump-index.md` if it doesn't exist — use format below
-5. Create `docs/monkey-brain/spec-index.md` if it doesn't exist — use format below
-6. **Write Core Philosophy to CLAUDE.md** — check if `CLAUDE.md` contains a `## Core Philosophy` section. If not, append the section below. If `CLAUDE.md` doesn't exist, create it with only the Core Philosophy section.
-7. Tell user setup is complete; run `/add-mk-dump` to start first session
+
+3. Create `docs/monkey-brain/`, `docs/monkey-brain/dump-sessions/`, and `docs/monkey-brain/specs/` if they don't exist
+4. Always overwrite `docs/monkey-brain/MONKEY_BRAIN_TEMPLATE.md` — use content below (template is skill-owned, not user data)
+5. Create `docs/monkey-brain/dump-index.md` if it doesn't exist — use format below
+6. Create `docs/monkey-brain/spec-index.md` if it doesn't exist — use format below
+7. **Write Core Philosophy to the detected instructions file** — check if it contains a `## Core Philosophy` section. If not, append the section below. If the file doesn't exist, create it with only the Core Philosophy section (create parent folders if needed).
+8. Tell user: setup complete, which tool was detected, which file was written, then run `/add-mk-dump` to start first session
 
 ## Templates
 
@@ -45,7 +55,7 @@ Notes:
 |------|--------|-----------|------|
 ```
 
-**`## Core Philosophy` section for CLAUDE.md** — append exactly if the section is missing:
+**`## Core Philosophy` section** — append exactly to the detected instructions file if the section is missing:
 
 ```
 ## Core Philosophy
