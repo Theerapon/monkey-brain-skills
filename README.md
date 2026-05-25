@@ -74,7 +74,7 @@ Run `/init-mk-dump` once to create `docs/monkey-brain/` with templates and empty
 
 **Option A:** `/plugin update monkey-brain@monkey-brain-skills`
 
-**Option B:** `npx skills@latest update Theerapon/monkey-brain-skills -y`
+**Option B:** `npx skills@latest add Theerapon/monkey-brain-skills -y`
 
 ## Companion skills
 
