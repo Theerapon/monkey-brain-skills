@@ -103,7 +103,10 @@ If `spec-index.md` does not exist, create it first:
 |------|--------|-----------|------|
 ```
 
-**Dump source only:** update the originating session row in `docs/monkey-brain/dump-index.md` — change status `cleaned` → `kicked`.
+**Dump source only:** update the originating session row in `docs/monkey-brain/dump-index.md` — change status `cleaned` → `kicked`. Then:
+1. Create `docs/monkey-brain/dump-sessions/{yyyy}/{mm}/done/` if it doesn't exist
+2. Move the dump session file to `docs/monkey-brain/dump-sessions/{yyyy}/{mm}/done/{filename}`
+3. Update the file's path in `dump-index.md` Sessions table to include `done/` (e.g. `2026/05/done/{filename}`)
 
 Tell user: "Spec written. Run `/play-mk-dump` next."
 

@@ -58,6 +58,9 @@ Work through sub-steps one at a time:
 All issues are `[x]`:
 - Remove `## Current Issue` and `## Resume` blocks from spec file
 - Update `docs/monkey-brain/spec-index.md` row: status → `done`, date → today, note → one sentence summary of entire spec
+- Create `docs/monkey-brain/specs/{yyyy}/{mm}/done/` if it doesn't exist
+- Move the spec file to `docs/monkey-brain/specs/{yyyy}/{mm}/done/{filename}`
+- Update the spec file's path in `spec-index.md` to include `done/` (e.g. `2026/05/done/filename.md`)
 - Tell user: "Spec complete. All issues done."
 
 ## Execution Principles
