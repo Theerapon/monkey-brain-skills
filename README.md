@@ -20,7 +20,8 @@ Six skills for the monkey-brain dump → kick → play workflow. Works with **Cl
 Installs as a proper Claude Code plugin. Skills are namespaced as `monkey-brain:skill-name`.
 
 ```
-/plugin install Theerapon/monkey-brain-skills
+/plugin marketplace add Theerapon/monkey-brain-skills
+/plugin install monkey-brain@monkey-brain-skills
 ```
 
 Then run setup once:
@@ -88,7 +89,7 @@ Behavioral guidelines to reduce common LLM coding mistakes, derived from Andrej 
 
 ## Updating
 
-**Option A:** `/plugin update monkey-brain`
+**Option A:** `/plugin update monkey-brain@monkey-brain-skills`
 
 **Option B:** `npx skills update Theerapon/monkey-brain-skills`
 

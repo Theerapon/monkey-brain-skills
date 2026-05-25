@@ -1,0 +1,14 @@
+{
+  "name": "monkey-brain-skills",
+  "owner": {
+    "name": "Theerapon"
+  },
+  "description": "Monkey-brain dump → kick → play workflow skills",
+  "plugins": [
+    {
+      "name": "monkey-brain",
+      "source": "./",
+      "description": "Six skills for the dump → kick → play workflow: init, add, clean, kick, play, remove"
+    }
+  ]
+}
