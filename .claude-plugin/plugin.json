@@ -7,5 +7,12 @@
   "homepage": "https://github.com/Theerapon/monkey-brain-skills",
   "repository": "https://github.com/Theerapon/monkey-brain-skills",
   "keywords": ["monkey-brain", "dump", "kick", "play", "workflow", "braindump"],
-  "skills": "./skills/monkey-brain"
+  "skills": [
+    "./skills/monkey-brain/add-mk-dump",
+    "./skills/monkey-brain/clean-mk-dump",
+    "./skills/monkey-brain/init-mk-dump",
+    "./skills/monkey-brain/kick-mk-dump",
+    "./skills/monkey-brain/play-mk-dump",
+    "./skills/monkey-brain/remove-mk-dump"
+  ]
 }
