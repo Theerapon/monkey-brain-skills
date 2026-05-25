@@ -1,0 +1,11 @@
+{
+  "name": "monkey-brain",
+  "description": "Monkey-brain dump → kick → play workflow skills for Claude Code and GitHub Copilot",
+  "version": "1.0.0",
+  "author": { "name": "Theerapon" },
+  "license": "MIT",
+  "homepage": "https://github.com/Theerapon/monkey-brain-skills",
+  "repository": "https://github.com/Theerapon/monkey-brain-skills",
+  "keywords": ["monkey-brain", "dump", "kick", "play", "workflow", "braindump"],
+  "skills": "./skills"
+}
