@@ -7,5 +7,5 @@
   "homepage": "https://github.com/Theerapon/monkey-brain-skills",
   "repository": "https://github.com/Theerapon/monkey-brain-skills",
   "keywords": ["monkey-brain", "dump", "kick", "play", "workflow", "braindump"],
-  "skills": "./skills"
+  "skills": "./skills/workflow"
 }
