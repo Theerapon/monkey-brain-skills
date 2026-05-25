@@ -54,12 +54,6 @@ Then run setup once inside Claude Code or Copilot Chat:
 /init-mk-dump
 ```
 
-### Option C — npx (skills.sh)
-
-```bash
-npx skills add Theerapon/monkey-brain-skills
-```
-
 ## First run
 
 After installing, open your workspace in Claude Code or VS Code and run `/init-mk-dump` (or `/monkey-brain:init-mk-dump` for plugin install).
@@ -77,9 +71,9 @@ This creates `docs/monkey-brain/` with the required templates and empty index fi
 
 ## Updating
 
-**Plugin install:** `/plugin update monkey-brain`
+**Option A:** `/plugin update monkey-brain`
 
-**Manual:** Pull and re-copy the `skills/` folders.
+**Option B:** Pull and re-copy the `skills/` folders.
 
 ## Structure
 
