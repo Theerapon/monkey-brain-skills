@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "add-mk-dump": {
+      "source": "Theerapon/monkey-brain-skills",
+      "sourceType": "github",
+      "skillPath": "skills/monkey-brain/add-mk-dump/SKILL.md",
+      "computedHash": "f93d2c3a5c005f4f738986849031c22d65bbffc04ba97833583f343929cda031"
+    },
+    "clean-mk-dump": {
+      "source": "Theerapon/monkey-brain-skills",
+      "sourceType": "github",
+      "skillPath": "skills/monkey-brain/clean-mk-dump/SKILL.md",
+      "computedHash": "fad42e48a25d8b001851fa76c465ceaf08ed0aa6c238603636fd32e9137a7b10"
+    },
+    "init-mk-dump": {
+      "source": "Theerapon/monkey-brain-skills",
+      "sourceType": "github",
+      "skillPath": "skills/monkey-brain/init-mk-dump/SKILL.md",
+      "computedHash": "116c067f5fcd5d63bd7590fd5bd0a5c45d410b4a4a261addae2d8d2f97e5e422"
+    },
+    "kick-mk-dump": {
+      "source": "Theerapon/monkey-brain-skills",
+      "sourceType": "github",
+      "skillPath": "skills/monkey-brain/kick-mk-dump/SKILL.md",
+      "computedHash": "d786a71cda8a1c632bc9db13039790d2ce7a7aac0c3a7f4511881f20bf72e917"
+    },
+    "play-mk-dump": {
+      "source": "Theerapon/monkey-brain-skills",
+      "sourceType": "github",
+      "skillPath": "skills/monkey-brain/play-mk-dump/SKILL.md",
+      "computedHash": "94d8116abcba2bbb60f92137ceba88b80b6ec51d60d8cad5aaf1d5b02ac33008"
+    },
+    "remove-mk-dump": {
+      "source": "Theerapon/monkey-brain-skills",
+      "sourceType": "github",
+      "skillPath": "skills/monkey-brain/remove-mk-dump/SKILL.md",
+      "computedHash": "745ed24b00ee2098eeede3673a1ae1977ed31c837eb6c58fb727e19fb044fc31"
+    }
+  }
+}
