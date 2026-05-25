@@ -100,7 +100,7 @@ monkey-brain-skills/
 ├── .claude-plugin/
 │   └── plugin.json       ← Claude Code plugin manifest
 ├── skills/
-│   └── workflow/
+│   └── monkey-brain/
 │       ├── add-mk-dump/
 │       ├── clean-mk-dump/
 │       ├── init-mk-dump/
